@@ -127,7 +127,7 @@ public class ArtifactoryTask extends DefaultTask {
     @TaskAction
     public void collectDeployDetails() {
         log.info("Collecting deployment details in task '{}'", getPath());
-        log.info("TRYING OUT WITH NEW ONE With changes");
+        log.info("TRYING OUT WITH NEW ONE With changes in java 17");
         if (!hasPublications()) {
             log.info("No publications to publish for project '{}'", getProject().getPath());
             return;

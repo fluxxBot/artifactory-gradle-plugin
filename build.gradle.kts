@@ -27,21 +27,17 @@ val testNgVersion = "7.9.0"
 val httpclientVersion = "4.5.14"
 val spotBugsVersion = "4.8.3"
 
-tasks.compileJava {
-    sourceCompatibility = "11"
-    targetCompatibility = "11"
-}
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(11))
+        languageVersion.set(JavaLanguageVersion.of(17))
     }
     withJavadocJar()
     withSourcesJar()
 }
 
 dependencies {
-    // Use local build-info JARs from the libs directory
+// Use local build-info JARs from the libs directory
     api(files("libs/build-info-extractor.jar"))
     api(files("libs/build-info-api.jar"))
     api(files("libs/build-info-client.jar"))
